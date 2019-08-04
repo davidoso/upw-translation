@@ -12,5 +12,4 @@ for ($i = 0; $i < count($flags); $i++) {
 }
 
 echo $html;
-
 ?>

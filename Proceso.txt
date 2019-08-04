@@ -1,0 +1,21 @@
+Fases a seguir para generar un archivo 'About Us.html' traducido a uno de los 29 idiomas:
+
+1. Preprocesamiento en VS Code
+Copiar columna de cada idioma de "Translation of About Us - SA's profiles.xlsx" en VS Code para:
+    Eliminar trailing spaces, double spaces between words, double quotes (")
+    Agregar punto final si es necesario
+    Reemplazar single quotes ' y ’ por '
+    Encerrar texto en negritas entre <strong></strong> tags
+
+2. Preprocesamiento en Excel
+Copiar todo el texto y pegar en Excel para:
+    Eliminar filas vacías
+    Concatenar con fórmula =CONCATENATE(CHAR(34), A1, CHAR(34), ",")
+
+3. Crear un archivo en languages/ dependiendo el idioma a traducir y copiar n-líneas de Excel al array $lang
+
+4. Modificar el idioma en replace-script.php
+
+5. Abrir en un navegador y comprobar que el total de $flags coincida con $lang, es decir, que la cantidad de líneas a traducir sean las mismas
+
+6. Inspeccionar código (Ctrl + u), seleccionar todo (Ctrl + a) y guardar archivo html en output/
